@@ -2000,6 +2000,7 @@ map
   border-left: solid 30px #FFFFFF;
   border-right: solid 30px #FFFFFF;
   width: 100%;
+  margin-bottom: 2rem;
   padding-bottom: 30%;
   position: relative;
   overflow: hidden; }

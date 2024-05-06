@@ -377,23 +377,62 @@ $(function() {
   map
 
   ***************************/
-  if ($("div").is("#map")) {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1pbmVlbGhhaWJhIiwiYSI6ImNsdnU3c3A1YjA2bGgya25lNW5ub3N2cGcifQ.2kFdoVKknYMWczI5qax0uA';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/amineelhaiba/clvu8durf01yq01qp5bvg5q6f',
-      center: [39.45527217730905, -0.3454211710373507],
-      zoom: 15
-    });
-    var marker = new mapboxgl.Marker()
-      .setLngLat([39.45527217730905, -0.3454211710373507])
-      .addTo(map);
-  }
+  // if ($("div").is("#map")) {
+  //   mapboxgl.accessToken = 'pk.eyJ1IjoiYW1pbmVlbGhhaWJhIiwiYSI6ImNsdnU3c3A1YjA2bGgya25lNW5ub3N2cGcifQ.2kFdoVKknYMWczI5qax0uA';
+  //   var map = new mapboxgl.Map({
+  //     container: 'map',
+  //     style: 'mapbox://styles/amineelhaiba/clvu8durf01yq01qp5bvg5q6f',
+  //     center: [39.45527217730905, -0.3454211710373507],
+  //     zoom: 15
+  //   });
+  //   var marker = new mapboxgl.Marker()
+  //     .setLngLat([39.45527217730905, -0.3454211710373507])
+  //     .addTo(map);
+  // }
+  // $(".sb-lock").on('click', function() {
+  //   $('.sb-map').toggleClass('sb-active');
+  //   $('.sb-lock').toggleClass('sb-active');
+  //   $('.sb-lock .fas').toggleClass('fa-unlock');
+  // });
+
+//   if ($("div").is("#leaflet-map")) {
+//     var map = L.map('leaflet-map').setView([39.45610982663886, -0.3455553460307942], 15);
+//     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//     }).addTo(map);
+//     var marker = L.marker([39.45527217730905, -0.3454211710373507]).addTo(map);
+
+//     $(".sb-lock").on('click', function() {
+//         $('.sb-map').toggleClass('sb-active');
+//         $('.sb-lock').toggleClass('sb-active');
+//         $('.sb-lock .fas').toggleClass('fa-unlock');
+//     });
+// }
+
+
+if ($("div").is("#leaflet-map")) {
+  var map = L.map('leaflet-map').setView([39.45527217730905, -0.3454211710373507], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // // Define a custom marker icon
+  // var yellowIcon = L.icon({
+  //     iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-yellow.png',
+  //     iconSize: [38, 95], // size of the icon
+  //     iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  //     popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+  // });
+
+  var marker = L.marker([39.45527217730905, -0.3454211710373507]).addTo(map);
+
   $(".sb-lock").on('click', function() {
-    $('.sb-map').toggleClass('sb-active');
-    $('.sb-lock').toggleClass('sb-active');
-    $('.sb-lock .fas').toggleClass('fa-unlock');
+      $('.sb-map').toggleClass('sb-active');
+      $('.sb-lock').toggleClass('sb-active');
+      $('.sb-lock .fas').toggleClass('fa-unlock');
   });
+}
+
 
   /***************************
 
