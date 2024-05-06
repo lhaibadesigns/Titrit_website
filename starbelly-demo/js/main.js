@@ -378,15 +378,15 @@ $(function() {
 
   ***************************/
   if ($("div").is("#map")) {
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic3Rvc2NhciIsImEiOiJja2VpbDE4b2UwbDg3MnNwY2d3YzlvcDV5In0.e26tLedpKwxrkOmPkWhQlg';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1pbmVlbGhhaWJhIiwiYSI6ImNsdnU3c3A1YjA2bGgya25lNW5ub3N2cGcifQ.2kFdoVKknYMWczI5qax0uA';
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/stoscar/ckk6qpt2h0yi517o77x3tw34f',
-      center: [-79.394900, 43.643102],
+      style: 'mapbox://styles/amineelhaiba/clvu8durf01yq01qp5bvg5q6f',
+      center: [39.45527217730905, -0.3454211710373507],
       zoom: 15
     });
     var marker = new mapboxgl.Marker()
-      .setLngLat([-79.394900, 43.643102])
+      .setLngLat([39.45527217730905, -0.3454211710373507])
       .addTo(map);
   }
   $(".sb-lock").on('click', function() {
