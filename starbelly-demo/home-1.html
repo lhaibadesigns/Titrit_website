@@ -18,7 +18,8 @@
   <!-- datepicker css -->
   <link rel="stylesheet" href="css/plugins/datepicker.css">
   <!-- mapbox css -->
-  <link href="css/plugins/mapbox-style.css" rel='stylesheet'>
+  <!-- <link href="css/plugins/mapbox-style.css" rel='stylesheet'> -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <!-- fancybox css -->
   <link rel="stylesheet" href="css/plugins/fancybox.min.css">
   <!-- starbelly css -->
@@ -694,7 +695,6 @@
     </section>
     <!-- banner end -->
 
-
           <!-- contact info -->
           <section class="sb-p-90-30">
             <div class="container">
@@ -713,7 +713,7 @@
                     <div class="sb-number">02</div>
                     <div class="sb-feature-text">
                       <h3 class="sb-mb-15">Call</h3>
-                      <p class="sb-text">+02 (044) 756-X6-52</p>
+                      <p class="sb-text"><a href="tel:+1234567890">+02 (044) 756-X6-52</a></p>
                     </div>
                   </div>
                 </div>
@@ -722,7 +722,7 @@
                     <div class="sb-number">03</div>
                     <div class="sb-feature-text">
                       <h3 class="sb-mb-15">Write</h3>
-                      <p class="sb-text">starbelly@mail.com</p>
+                      <p class="sb-text"><a href="mailto:info@example.com">info@example.com</a></p>
                     </div>
                   </div>
                 </div>
@@ -733,7 +733,7 @@
 
     <!-- map -->
     <div class="sb-map-frame">
-      <div id="map" class="sb-map"></div>
+      <div id="leaflet-map" class="sb-map"></div>
       <div class="sb-lock"><i class="fas fa-lock"></i></div>
     </div>
     <!-- map end -->
@@ -772,7 +772,7 @@
       <footer>
         <div class="container">
           <div class="sb-footer-frame">
-            <a href="home-2.html" class="sb-logo-frame">
+            <a href="home-1.html" class="sb-logo-frame">
               <!-- logo img -->
               <img src="img/ui/logo.svg" alt="Starbelly">
             </a>
@@ -828,6 +828,7 @@
   <!-- sticky -->
   <script src="js/plugins/sticky.js"></script>
   <!-- mapbox js -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="js/plugins/mapbox.min.js"></script>
   <!-- fancybox js -->
   <script src="js/plugins/fancybox.min.js"></script>
