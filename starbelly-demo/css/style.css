@@ -536,6 +536,34 @@ badge
     background-color: #9CCC65; }
   .sb-badge.sb-hot {
     background-color: #FF5252; }
+  .sb-badge.sb-Ensaladas {
+    background-color: #52b7ff; }
+    .sb-badge.sb-Tapas {
+      background-color: #b2f993; }
+      .sb-badge.sb-Tostas {
+        background-color: #5ed4b3; }
+        .sb-badge.sb-Hamburguesas {
+          background-color: #9e8473; }
+          .sb-badge.sb-Bebidas {
+            background-color: #f64d4d; }
+            .sb-badge.sb-Cervezas {
+              background-color: #7b9ef6; }
+              .sb-badge.sb-Vinos {
+                background-color: #ffffff; }
+                .sb-badge.sb-VinosTintos {
+                  background-color: #fc2c59; }
+                  .sb-badge.sb-Cafes {
+                    background-color: #896947; }
+                    .sb-badge.sb-Cubatas {
+                      background-color: #f2f517; }
+                      .sb-badge.sb-Whisky {
+                        background-color: #e5be82; }
+                        .sb-badge.sb-Vodka {
+                          background-color: #a76de2; }
+                          .sb-badge.sb-OtrasBebidas {
+                            background-color: #b7f77b; }
+                  
+
 
 /***************************
 
@@ -2057,6 +2085,34 @@ map
 /***************************
 
 blog
+
+
+
+*******/
+
+.sb-card-title[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  background-color: #4CAF50; /* Updated color */
+  color: #fff;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s ease-out; /* Added transform transition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle box-shadow */
+  white-space: nowrap; /* Ensure text appears in one line */
+}
+
+.sb-card-title:hover[data-tooltip]::before {
+  opacity: 1;
+  transform: translate(-50%, -5px); /* Added translateY for subtle lift effect */
+}
+
+
+/*********
 
 ***************************/
 .sb-blog-card {
