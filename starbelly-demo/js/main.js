@@ -410,11 +410,11 @@ $(function() {
 // }
 
 
-if ($("div").is("#leaflet-map")) {
-  var map = L.map('leaflet-map').setView([39.45527217730905, -0.3454211710373507], 15);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+if ($("div").is("#map")) {
+  // var map = L.map('leaflet-map').setView([39.45527217730905, -0.3454211710373507], 15);
+  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  // }).addTo(map);
 
   // // Define a custom marker icon
   // var yellowIcon = L.icon({
@@ -424,7 +424,7 @@ if ($("div").is("#leaflet-map")) {
   //     popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
   // });
 
-  var marker = L.marker([39.45527217730905, -0.3454211710373507]).addTo(map);
+  // var marker = L.marker([39.45527217730905, -0.3454211710373507]).addTo(map);
 
   $(".sb-lock").on('click', function() {
       $('.sb-map').toggleClass('sb-active');
@@ -734,23 +734,14 @@ if ($("div").is("#leaflet-map")) {
     map
 
     ***************************/
-    if ($("div").is("#map")) {
-      mapboxgl.accessToken = 'pk.eyJ1Ijoic3Rvc2NhciIsImEiOiJja2VpbDE4b2UwbDg3MnNwY2d3YzlvcDV5In0.e26tLedpKwxrkOmPkWhQlg';
-      var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/stoscar/ckk6qpt2h0yi517o77x3tw34f',
-        center: [-79.394900, 43.643102],
-        zoom: 15
-      });
-      var marker = new mapboxgl.Marker()
-        .setLngLat([-79.394900, 43.643102])
-        .addTo(map);
-    }
-    $(".sb-lock").on('click', function() {
-      $('.sb-map').toggleClass('sb-active');
-      $('.sb-lock').toggleClass('sb-active');
-      $('.sb-lock .fas').toggleClass('fa-unlock');
-    });
+    // if ($("div").is("#map")) {
+      
+    //   $(".sb-lock").on('click', function() {
+    //     $('.sb-map').toggleClass('sb-active');
+    //     $('.sb-lock').toggleClass('sb-active');
+    //     $('.sb-lock .fas').toggleClass('fa-unlock');
+    //   });
+    // }
     /***************************
 
     datepicker
