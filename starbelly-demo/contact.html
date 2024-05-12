@@ -285,7 +285,7 @@
                 <div class="sb-feature-text">
 
                   <h3 class="sb-mb-15">Call</h3>
-                  <p class="sb-text"><a href="tell:+34961102127">+34 961 10 21 27</a></p>
+                  <p class="sb-text"><a href="#" onclick="redirectToCall()">+34 961 10 21 27</a></p>
                 </div>
               </div>
             </div>
@@ -295,7 +295,7 @@
                 <div class="sb-feature-text">
 
                   <h3 class="sb-mb-15">Write</h3>
-                  <p class="sb-text"><a href="mailto:contact@titritcafeteria.es">contact@titritcafeteria.es</a></p>
+                  <p class="sb-text"><a href="#" onclick="redirectToEmail()">contact@titritcafeteria.es</a></p>
                 </div>
               </div>
             </div>
@@ -367,6 +367,12 @@
     <script>
       function redirectToGoogleMaps() {
         window.location.href = 'https://maps.app.goo.gl/fvNPtNEe9Euu3ioG7';
+      }
+      function redirectToCall() {
+        window.location.href = 'tel:+34961102127';
+      }
+      function redirectToEmail() {
+        window.location.href = 'mailto:/contact@titritcafeteria.es';
       }
     </script>
 
