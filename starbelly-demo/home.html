@@ -127,6 +127,12 @@
       function redirectToGoogleMaps() {
         window.location.href = 'https://maps.app.goo.gl/fvNPtNEe9Euu3ioG7';
       }
+      function redirectToCall() {
+        window.location.href = 'tel:+34961102127';
+      }
+      function redirectToEmail() {
+        window.location.href = 'mailto:/contact@titritcafeteria.es';
+      }
     </script>
 
 
@@ -712,7 +718,9 @@
               <div class="sb-form-content">
                 <div class="sb-main-content">
                   <h3 class="sb-mb-30">Detalles de la reserva</h3>
-                  <form id="form">
+                  <form id="form"
+                    action="https://formspree.io/f/meqydayz"
+                    method="POST" >
                     <div class="row">
                       <div class="col-lg-12">
                         <div class="sb-group-input">
@@ -723,9 +731,9 @@
                       </div>
                       <div class="col-lg-12">
                         <div class="sb-group-input">
-                          <input type="tel" name="email" required>
+                          <input type="email" name="email" required>
                           <span class="sb-bar"></span>
-                          <label>Teléfono</label>
+                          <label>email</label>
                         </div>
                       </div>
                       <div class="col-lg-12">
@@ -744,7 +752,7 @@
                       </div>
                     </div>
                     <!-- button -->
-                    <button class="sb-btn sb-cf-submit sb-show-success">
+                    <button class="sb-btn sb-cf-submit sb-show-success" type="submit">
                       <span class="sb-icon">
                         <img src="img/ui/icons/arrow.svg" alt="icon">
                       </span>
@@ -795,7 +803,7 @@
                     <div class="sb-feature-text">
 
                       <h3 class="sb-mb-15">Teléfono</h3>
-                      <p class="sb-text"><a href="tell:+34961102127">+34 961 10 21 27</a></p>
+                      <p class="sb-text"><a href="#" onclick="redirectToCall()">+34 961 10 21 27</a></p>
                     </div>
                   </div>
                 </div>
@@ -805,7 +813,7 @@
                     <div class="sb-feature-text">
 
                       <h3 class="sb-mb-15">E-mail</h3>
-                      <p class="sb-text"><a href="mailto:contact@titritcafeteria.es">contact@titritcafeteria.es</a></p>
+                      <p class="sb-text"><a href="#" onclick="redirectToEmail()">contact@titritcafeteria.es</a></p>
                     </div>
                   </div>
                 </div>

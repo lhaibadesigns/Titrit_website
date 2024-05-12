@@ -211,7 +211,9 @@
                 <div class="sb-form-content">
                   <div class="sb-main-content">
                     <h3 class="sb-mb-30">Enviar mensaje</h3>
-                    <form id="form">
+                    <form id="form"
+                      action="https://formspree.io/f/meqydayz"
+                      method="POST" >
                       <div class="sb-group-input">
                         <input type="text" name="name" required>
                         <span class="sb-bar"></span>
@@ -229,7 +231,7 @@
                       </div>
                       <p class="sb-text sb-text-xs sb-mb-30">*Prometemos no divulgar <br>tu información personal a terceros.</p>
                       <!-- button -->
-                      <button class="sb-btn sb-cf-submit sb-show-success">
+                      <button class="sb-btn sb-cf-submit sb-show-success" type="submit">
                         <span class="sb-icon">
                           <img src="img/ui/icons/arrow.svg" alt="icon">
                         </span>
@@ -283,7 +285,7 @@
                 <div class="sb-feature-text">
 
                   <h3 class="sb-mb-15">Call</h3>
-                  <p class="sb-text"><a href="tell:+34961102127">+34 961 10 21 27</a></p>
+                  <p class="sb-text"><a href="#" onclick="redirectToCall()">+34 961 10 21 27</a></p>
                 </div>
               </div>
             </div>
@@ -293,7 +295,7 @@
                 <div class="sb-feature-text">
 
                   <h3 class="sb-mb-15">Write</h3>
-                  <p class="sb-text"><a href="mailto:contact@titritcafeteria.es">contact@titritcafeteria.es</a></p>
+                  <p class="sb-text"><a href="#" onclick="redirectToEmail()">contact@titritcafeteria.es</a></p>
                 </div>
               </div>
             </div>
@@ -365,6 +367,12 @@
     <script>
       function redirectToGoogleMaps() {
         window.location.href = 'https://maps.app.goo.gl/fvNPtNEe9Euu3ioG7';
+      }
+      function redirectToCall() {
+        window.location.href = 'tel:+34961102127';
+      }
+      function redirectToEmail() {
+        window.location.href = 'mailto:/contact@titritcafeteria.es';
       }
     </script>
 
