@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- page title -->
   <title>Titrit Cafetería - Valencia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
@@ -209,11 +210,31 @@
         </div>
         <div class="sb-info-bar-footer">
           <ul class="sb-social">
-            <li><a href="#."><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#."><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#."><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#."><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-youtube"></i></a></li>
           </ul>
+
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script>
+              $(document).ready(function() {
+                  // General click handler excluding Instagram link
+                  $('a[href]:not([href^="mailto\\:"], [href$="\\#"], [href$="\\#."])').on('click', function(event) {
+                      if (!$(this).attr('href').startsWith('https://www.instagram.com/titritcafeteria/')) {
+                          $(this).addClass('sb-click');
+                      }
+                  });
+      
+                  // Specific click handler for the Instagram link
+                  $('a[href="https://www.instagram.com/titritcafeteria/"]').on('click', function(event) {
+                      // Prevent the default behavior
+                      // Open the link in a new tab
+                      window.open($(this).attr('href'), '_blank');
+                  });
+              });
+          </script>
+
         </div>
       </div>
       <!-- info bar end -->
@@ -377,13 +398,11 @@
         </div>
         <div class="col-lg-6 align-self-center sb-mb-60">
           <h2 class="sb-mb-30">Quiénes somos?</h2>
-          <p class="sb-text sb-mb-60">Disfruta de los auténticos sabores de Valencia con 
-            nuestra emblemática paella valenciana, una obra maestra culinaria que encarna 
-            la esencia de la rica herencia gastronómica de nuestra región. <br>¿Antojo de algo más ligero? 
-            Sumérgete en nuestros sándwiches recién preparados rellenos de tiernos calamares, una deliciosa 
-            combinación de crujiente bondad y satisfacción salada. En nuestra cafetería, cada plato es 
-            una celebración de ingredientes de calidad, artesanía experta y un profundo amor por la buena comida. 
-            <br>Únete a nosotros y embarca en una aventura culinaria que promete dejarte con ganas de más.</p>
+          <p class="sb-text sb-mb-60">Disfruta de Los auteuticos sabores de valencia con nuestras emblimaticas tapas, 
+            obras maestras culinarias que encarnan la esencia de la rica herencia gastronomica de nuestra región.
+          </br>Sumérgete en los deliciosos sabores de nuestros sándwiches y bocadillos.
+          </br>En nuestra cafetería cada plato es una celebración conjunta de calidad y
+            artesanía contando con unos ingredientes de calidad y finalizando con un profundo amor por la buena comida.</p>
           <img src="img/ui/signature.png" alt="Signature" class="sb-signature sb-mb-30">
         </div>
       </div>
@@ -855,11 +874,29 @@
               <img src="img/ui/LogoTitrit.png" alt="Starbelly">
             </a>
             <ul class="sb-social">
-              <li><a href="#."><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#."><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#."><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#."><i class="fab fa-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-youtube"></i></a></li>
             </ul>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    // General click handler excluding Instagram link
+                    $('a[href]:not([href^="mailto\\:"], [href$="\\#"], [href$="\\#."])').on('click', function(event) {
+                        if (!$(this).attr('href').startsWith('https://www.instagram.com/titritcafeteria/')) {
+                            $(this).addClass('sb-click');
+                        }
+                    });
+        
+                    // Specific click handler for the Instagram link
+                    $('a[href="https://www.instagram.com/titritcafeteria/"]').on('click', function(event) {
+                        // Prevent the default behavior
+                        // Open the link in a new tab
+                        window.open($(this).attr('href'), '_blank');
+                    });
+                });
+            </script>
             <div class="sb-copy">&copy; 2017 Cafetería Titrit. Todos los derechos reservados.</div>
           </div>
         </div>

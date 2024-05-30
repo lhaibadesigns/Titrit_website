@@ -457,12 +457,23 @@ if ($("div").is("#map")) {
     click effect
 
     ***************************/
-    $('a[href]:not([href^="mailto\\:"], [href$="\\#"], [href$="\\#."])').on('click', function() {
-      $(this).addClass('sb-click');
-    });
-    $('.sb-breadcrumbs a[href]:not([href^="mailto\\:"], [href$="\\#"], [href$="\\#."])').on('click', function() {
-      $('.sb-breadcrumbs').addClass('sb-click');
-    });
+    $(document).ready(function() {
+      // General click handler excluding Instagram link
+      $('a[href]:not([href^="mailto\\:"], [href$="\\#"], [href$="\\#."])').on('click', function(event) {
+          if (!$(this).attr('href').startsWith('https://www.instagram.com/titritcafeteria/')) {
+              $(this).addClass('sb-click');
+          }
+      });
+  
+      // Specific click handler for the Instagram link
+      $('#instagramLink').on('click', function(event) {
+          // Prevent the default behavior
+          event.preventDefault();
+          // Open the link in a new tab
+          window.open($(this).attr('href'), '_blank');
+      });
+  });
+  
     /***************************
 
     add to cart
@@ -479,6 +490,10 @@ if ($("div").is("#map")) {
         $('.sb-cart-number').text(counter);
       }, 300);
     });
+
+    /***************************
+
+
     /***************************
 
     menu

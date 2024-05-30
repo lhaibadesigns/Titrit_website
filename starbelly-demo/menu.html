@@ -108,14 +108,30 @@
           <div class="sb-ib-title-frame sb-mb-30">
             <h4>Instagram</h4><i class="fas fa-arrow-down"></i>
           </div>
-          <ul class="sb-instagram sb-mb-30">
-            <li><a href="#."><img src="img/instagram/1.jpg" alt="instagram"></a></li>
-            <li><a href="#."><img src="img/instagram/2.jpeg" alt="instagram"></a></li>
-            <li><a href="#."><img src="img/instagram/3.jpeg" alt="instagram"></a></li>
-            <li><a href="#."><img src="img/instagram/4.jpeg" alt="instagram"></a></li>
-            <li><a href="#."><img src="img/instagram/5.jpeg" alt="instagram"></a></li>
-            <li><a href="#."><img src="img/instagram/6.jpeg" alt="instagram"></a></li>
+          <ul class="sb-social">
+            <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-youtube"></i></a></li>
           </ul>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script>
+              $(document).ready(function() {
+                  // General click handler excluding Instagram link
+                  $('a[href]:not([href^="mailto\\:"], [href$="\\#"], [href$="\\#."])').on('click', function(event) {
+                      if (!$(this).attr('href').startsWith('https://www.instagram.com/titritcafeteria/')) {
+                          $(this).addClass('sb-click');
+                      }
+                  });
+      
+                  // Specific click handler for the Instagram link
+                  $('a[href="https://www.instagram.com/titritcafeteria/"]').on('click', function(event) {
+                      // Prevent the default behavior
+                      // Open the link in a new tab
+                      window.open($(this).attr('href'), '_blank');
+                  });
+              });
+          </script>
           
         </div>
         <div class="sb-info-bar-footer">
@@ -2101,11 +2117,29 @@
               <img src="img/ui/LogoTitrit.png" alt="Starbelly">
             </a>
             <ul class="sb-social">
-              <li><a href="#."><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#."><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#."><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#."><i class="fab fa-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com/titritcafeteria/"><i class="fab fa-youtube"></i></a></li>
             </ul>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    // General click handler excluding Instagram link
+                    $('a[href]:not([href^="mailto\\:"], [href$="\\#"], [href$="\\#."])').on('click', function(event) {
+                        if (!$(this).attr('href').startsWith('https://www.instagram.com/titritcafeteria/')) {
+                            $(this).addClass('sb-click');
+                        }
+                    });
+        
+                    // Specific click handler for the Instagram link
+                    $('a[href="https://www.instagram.com/titritcafeteria/"]').on('click', function(event) {
+                        // Prevent the default behavior
+                        // Open the link in a new tab
+                        window.open($(this).attr('href'), '_blank');
+                    });
+                });
+            </script>
             <div class="sb-copy">&copy; 2017 Cafetería Titrit. Todos los derechos reservados.</div>
           </div>
         </div>
